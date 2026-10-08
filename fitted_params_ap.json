@@ -1,0 +1,17 @@
+{
+  "through_week": 5,
+  "year": 2026,
+  "params": {
+    "group_game_weight": 1.4127,
+    "nonp4_win_weight": 0.0,
+    "k": 6.4621,
+    "tau": 13.8781,
+    "kappa0": 3.9316,
+    "prior_shrink": 1.2184,
+    "hfa_scale": 0.7639,
+    "upset_bonus": 0.6738,
+    "beta_late": 0.8981
+  },
+  "loss_default": 113.66,
+  "loss_fit": 47.35
+}

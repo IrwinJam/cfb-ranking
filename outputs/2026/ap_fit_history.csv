@@ -1,0 +1,2 @@
+through_week,fitted_at,loss_default,loss_fit,spearman_last_week,group_game_weight,nonp4_win_weight,k,tau,kappa0,prior_shrink,hfa_scale,upset_bonus,beta_late
+5,2026-10-08 00:47,113.66,47.35,0.851,1.4127,0.6147,6.4621,13.8781,3.9316,1.2184,0.7639,0.6738,0.8981

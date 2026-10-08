@@ -1,0 +1,10 @@
+# secrets and local data
+.env
+data/
+__pycache__/
+*.pyc
+
+# local logs and scratch
+outputs/*.txt
+outputs/site_test/
+outputs/refresh_log.txt

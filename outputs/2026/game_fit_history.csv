@@ -1,0 +1,2 @@
+through_week,fitted_at,n_games,logloss_default,logloss_fit,cv_logloss_fit,group_game_weight,k,tau,kappa0,prior_shrink,hfa_scale,upset_bonus,sigma_g
+5,2026-10-08 11:40,166,0.5797,0.5254,0.5659,1.9144,4.991,8.1995,9.9959,0.8972,1.8714,0.5717,12.622

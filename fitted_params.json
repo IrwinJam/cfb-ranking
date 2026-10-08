@@ -1,0 +1,19 @@
+{
+  "through_week": 5,
+  "year": 2026,
+  "source": "game results",
+  "params": {
+    "group_game_weight": 1.9144,
+    "nonp4_win_weight": 0.0,
+    "k": 4.991,
+    "tau": 8.1995,
+    "kappa0": 9.9959,
+    "prior_shrink": 0.8972,
+    "hfa_scale": 1.8714,
+    "upset_bonus": 0.5717,
+    "beta_late": 0.5,
+    "sigma_g": 12.622
+  },
+  "logloss_default": 0.5797,
+  "logloss_fit": 0.5254
+}
