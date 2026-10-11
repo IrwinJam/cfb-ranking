@@ -149,6 +149,11 @@ def main():
         print("\nleave-one-week-out log-loss (settings refit without that week):")
         print(f.round(4).to_string(index=False))
         print(f"mean: fitted {f.fitted.mean():.4f} | defaults {f.defaults.mean():.4f} | AP-fitted {f.ap_fitted.mean():.4f}")
+        cv_summary = dict(through_week=through, n_games=int(n_games), weeks=int(len(f)), fitted=round(float(f.fitted.mean()), 4),
+                          defaults=round(float(f.defaults.mean()), 4), ap_fitted=round(float(f.ap_fitted.mean()), 4))
+        cv_dir = Path("outputs") / str(a.year)
+        cv_dir.mkdir(parents=True, exist_ok=True)
+        (cv_dir / "cv_summary.json").write_text(json.dumps(cv_summary, indent=2))
 
     vals = {n: round(float(best[i]), 4) for i, n in enumerate(NAMES)}
     allp = dict(group_game_weight=vals["group_game_weight"], nonp4_win_weight=0.0, k=vals["k"], tau=vals["tau"],
