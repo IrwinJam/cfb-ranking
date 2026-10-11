@@ -37,6 +37,40 @@ A coin flip scores 0.693 and lower is better. The AP fit matches the poll more c
 | 9 | BYU (Big 12) | 5-0 |
 | 10 | Texas (SEC) | 4-1 |
 
+<!-- ap:start -->
+## AP Top 25 and the board, through week 6
+
+The AP poll released after week 6 games, with the board's rank for each team. A team outside the Power Four group has no board rank. A positive gap means the board has the team higher.
+
+| AP | Team | Board | Gap |
+|---|------|-------|-----|
+| 1 | Georgia | 2 | -1 |
+| 2 | Notre Dame | 3 | -1 |
+| 3 | Miami | 1 | +2 |
+| 4 | Ohio State | 13 | -9 |
+| 5 | Indiana | 5 | +0 |
+| 6 | Alabama | 4 | +2 |
+| 7 | Texas | 10 | -3 |
+| 8 | BYU | 9 | -1 |
+| 9 | Ole Miss | 15 | -6 |
+| 10 | Texas Tech | 6 | +4 |
+| 11 | Utah | 17 | -6 |
+| 12 | UCLA | 7 | +5 |
+| 13 | Missouri | 20 | -7 |
+| 14 | Tennessee | 25 | -11 |
+| 15 | Kentucky | 16 | -1 |
+| 16 | Mississippi State | 18 | -2 |
+| 17 | Iowa | 14 | +3 |
+| 18 | Oklahoma State | 22 | -4 |
+| 19 | USC | 23 | -4 |
+| 20 | Houston | 11 | +9 |
+| 21 | Wake Forest | 8 | +13 |
+| 22 | LSU | 29 | -7 |
+| 23 | Boise State | - | - |
+| 24 | SMU | 28 | -4 |
+| 25 | Northwestern | 27 | -2 |
+<!-- ap:end -->
+
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
 
 ## Run it

@@ -1,0 +1,176 @@
+poll_week,games_through,rank,team,conference,points,first_place_votes
+1,0,1,Ohio State,Big Ten,1672,40
+1,0,2,Oregon,Big Ten,1597,14
+1,0,3,Georgia,SEC,1513,0
+1,0,4,Notre Dame,Independent,1510,6
+1,0,5,Texas,SEC,1483,0
+1,0,6,Indiana,Big Ten,1440,8
+1,0,7,Miami,ACC,1379,1
+1,0,8,Texas A&M,SEC,1131,0
+1,0,9,Ole Miss,SEC,1102,0
+1,0,10,Oklahoma,SEC,1047,0
+1,0,11,LSU,SEC,988,0
+1,0,12,Texas Tech,Big 12,983,0
+1,0,13,Alabama,SEC,904,0
+1,0,14,USC,Big Ten,839,0
+1,0,14,BYU,Big 12,839,0
+1,0,16,Michigan,Big Ten,718,0
+1,0,17,Washington,Big Ten,501,0
+1,0,18,Penn State,Big Ten,482,0
+1,0,19,SMU,ACC,434,0
+1,0,20,Tennessee,SEC,394,0
+1,0,21,Utah,Big 12,304,0
+1,0,22,Iowa,Big Ten,260,0
+1,0,23,Houston,Big 12,252,0
+1,0,24,Louisville,ACC,194,0
+1,0,25,Missouri,SEC,117,0
+2,1,1,Ohio State,Big Ten,1684,46
+2,1,2,Georgia,SEC,1532,0
+2,1,3,Notre Dame,Independent,1512,4
+2,1,4,Texas,SEC,1462,2
+2,1,5,Indiana,Big Ten,1428,8
+2,1,6,Oregon,Big Ten,1422,3
+2,1,7,Miami,ACC,1405,1
+2,1,8,LSU,SEC,1315,5
+2,1,9,Ole Miss,SEC,1154,0
+2,1,10,Texas A&M,SEC,1079,0
+2,1,11,Oklahoma,SEC,1039,0
+2,1,12,Alabama,SEC,910,0
+2,1,13,Texas Tech,Big 12,900,0
+2,1,14,USC,Big Ten,861,0
+2,1,15,BYU,Big 12,840,0
+2,1,16,Penn State,Big Ten,621,0
+2,1,17,SMU,ACC,501,0
+2,1,18,Tennessee,SEC,491,0
+2,1,19,Washington,Big Ten,489,0
+2,1,20,Utah,Big 12,381,0
+2,1,21,Iowa,Big Ten,369,0
+2,1,22,Houston,Big 12,214,0
+2,1,23,Missouri,SEC,182,0
+2,1,24,Louisville,ACC,163,0
+2,1,25,Virginia,ACC,89,0
+3,2,1,Texas,SEC,1678,56
+3,2,2,Georgia,SEC,1551,3
+3,2,3,Notre Dame,Independent,1531,1
+3,2,4,Indiana,Big Ten,1466,3
+3,2,5,Miami,ACC,1452,4
+3,2,6,Ohio State,Big Ten,1407,0
+3,2,7,LSU,SEC,1334,1
+3,2,8,Ole Miss,SEC,1216,0
+3,2,9,Texas A&M,SEC,1165,0
+3,2,10,Alabama,SEC,1068,0
+3,2,11,BYU,Big 12,966,0
+3,2,12,USC,Big Ten,944,0
+3,2,13,Texas Tech,Big 12,910,0
+3,2,14,Penn State,Big Ten,692,0
+3,2,15,Tennessee,SEC,676,0
+3,2,16,SMU,ACC,636,0
+3,2,17,Utah,Big 12,558,0
+3,2,18,Iowa,Big Ten,391,0
+3,2,19,Michigan,Big Ten,382,0
+3,2,20,Missouri,SEC,344,0
+3,2,21,Oregon,Big Ten,324,0
+3,2,22,Houston,Big 12,292,0
+3,2,23,Louisville,ACC,244,0
+3,2,24,Oklahoma,SEC,222,0
+3,2,25,Virginia,ACC,182,0
+4,3,1,Texas,SEC,1706,58
+4,3,2,Georgia,SEC,1580,3
+4,3,3,Notre Dame,Independent,1517,0
+4,3,4,Ole Miss,SEC,1488,3
+4,3,5,Indiana,Big Ten,1467,4
+4,3,6,Miami,ACC,1445,1
+4,3,7,Ohio State,Big Ten,1415,0
+4,3,8,Alabama,SEC,1182,0
+4,3,9,BYU,Big 12,1090,0
+4,3,10,LSU,SEC,1078,0
+4,3,11,Texas Tech,Big 12,1067,0
+4,3,12,USC,Big Ten,907,0
+4,3,13,Penn State,Big Ten,850,0
+4,3,14,Tennessee,SEC,826,0
+4,3,15,Utah,Big 12,752,0
+4,3,16,Louisville,ACC,692,0
+4,3,17,Iowa,Big Ten,561,0
+4,3,18,Michigan,Big Ten,432,0
+4,3,19,Missouri,SEC,369,0
+4,3,20,Oregon,Big Ten,364,0
+4,3,21,Florida,SEC,269,0
+4,3,22,SMU,ACC,212,0
+4,3,23,Texas A&M,SEC,202,0
+4,3,24,Mississippi State,SEC,179,0
+4,3,25,Houston,Big 12,127,0
+5,4,1,Texas,SEC,1737,62
+5,4,2,Georgia,SEC,1646,6
+5,4,3,Notre Dame,Independent,1581,0
+5,4,4,Miami,ACC,1501,1
+5,4,5,Ohio State,Big Ten,1465,0
+5,4,6,Indiana,Big Ten,1408,1
+5,4,7,Alabama,SEC,1305,0
+5,4,8,Florida,SEC,1272,0
+5,4,9,Ole Miss,SEC,1089,0
+5,4,10,BYU,Big 12,1078,0
+5,4,11,LSU,SEC,1073,0
+5,4,12,Texas Tech,Big 12,1053,0
+5,4,13,Utah,Big 12,903,0
+5,4,14,Iowa,Big Ten,856,0
+5,4,15,Oregon,Big Ten,725,0
+5,4,16,Mississippi State,SEC,715,0
+5,4,17,Tennessee,SEC,663,0
+5,4,18,USC,Big Ten,410,0
+5,4,19,Oklahoma State,Big 12,345,0
+5,4,20,Houston,Big 12,278,0
+5,4,21,SMU,ACC,246,0
+5,4,22,Boise State,Pac-12,221,0
+5,4,23,UCLA,Big Ten,218,0
+5,4,24,Kentucky,SEC,150,0
+5,4,25,Missouri,SEC,118,0
+6,5,1,Texas,SEC,1737,61
+6,5,2,Georgia,SEC,1647,6
+6,5,3,Notre Dame,Independent,1532,0
+6,5,4,Miami,ACC,1524,2
+6,5,5,Ohio State,Big Ten,1490,0
+6,5,6,Alabama,SEC,1460,0
+6,5,7,Indiana,Big Ten,1380,1
+6,5,8,BYU,Big 12,1144,0
+6,5,9,Ole Miss,SEC,1095,0
+6,5,10,LSU,SEC,1087,0
+6,5,11,Texas Tech,Big 12,1062,0
+6,5,12,Utah,Big 12,996,0
+6,5,13,Oregon,Big Ten,831,0
+6,5,14,Missouri,SEC,755,0
+6,5,15,Tennessee,SEC,746,0
+6,5,16,Florida,SEC,691,0
+6,5,17,Mississippi State,SEC,487,0
+6,5,18,Oklahoma State,Big 12,477,0
+6,5,19,USC,Big Ten,439,0
+6,5,20,Iowa,Big Ten,367,0
+6,5,21,UCLA,Big Ten,287,0
+6,5,22,Houston,Big 12,279,0
+6,5,23,Boise State,Pac-12,271,0
+6,5,24,SMU,ACC,167,0
+6,5,25,Pittsburgh,ACC,162,0
+7,6,1,Georgia,SEC,1745,66
+7,6,2,Notre Dame,Independent,1630,1
+7,6,3,Miami,ACC,1594,2
+7,6,4,Ohio State,Big Ten,1508,0
+7,6,5,Indiana,Big Ten,1461,1
+7,6,6,Alabama,SEC,1372,0
+7,6,7,Texas,SEC,1371,0
+7,6,8,BYU,Big 12,1237,0
+7,6,9,Ole Miss,SEC,1135,0
+7,6,10,Texas Tech,Big 12,1132,0
+7,6,11,Utah,Big 12,1073,0
+7,6,12,UCLA,Big Ten,951,0
+7,6,13,Missouri,SEC,882,0
+7,6,14,Tennessee,SEC,706,0
+7,6,15,Kentucky,SEC,655,0
+7,6,16,Mississippi State,SEC,650,0
+7,6,17,Iowa,Big Ten,621,0
+7,6,18,Oklahoma State,Big 12,604,0
+7,6,19,USC,Big Ten,505,0
+7,6,20,Houston,Big 12,380,0
+7,6,21,Wake Forest,ACC,326,0
+7,6,22,LSU,SEC,274,0
+7,6,23,Boise State,Pac-12,268,0
+7,6,24,SMU,ACC,142,0
+7,6,25,Northwestern,Big Ten,112,0
