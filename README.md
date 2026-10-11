@@ -12,30 +12,30 @@ The ranking score blends the rating with a resume measure, which is wins above w
 
 ## Choosing the settings
 
-The settings were fit twice. The first fit used game results: ratings through week g predict the games of week g+1, scored by log-loss over 166 games involving a top-group team. The second fit matched the AP poll. Each was then scored on weeks it had not been fit on: one week is held out, the settings are refit on the rest, and that week is predicted.
+The settings were fit twice. The first fit used game results: ratings through week g predict the games of week g+1, scored by log-loss over 194 games involving a top-group team. The second fit matched the AP poll. Each was then scored on weeks it had not been fit on: one week is held out, the settings are refit on the rest, and that week is predicted.
 
 | Settings | Mean held-out log-loss |
 |---|---|
-| Fit to game results | 0.566 |
-| Hand-picked defaults | 0.581 |
-| Fit to the AP poll | 0.640 |
+| Fit to game results | 0.584 |
+| Hand-picked defaults | 0.592 |
+| Fit to the AP poll | 0.639 |
 
 A coin flip scores 0.693 and lower is better. The AP fit matches the poll more closely and predicts games worse, which is why the game-results fit is the one in use (`fitted_params.json`). The AP fit is kept for comparison in `fitted_params_ap.json`.
 
-## Rankings through week 5, 2026
+## Rankings through week 6, 2026
 
 | # | Team | Record |
 |---|------|--------|
 | 1 | Miami (ACC) | 5-0 |
-| 2 | Alabama (SEC) | 5-0 |
-| 3 | Notre Dame | 5-0 |
-| 4 | Texas (SEC) | 4-0 |
-| 5 | Texas Tech (Big 12) | 5-0 |
-| 6 | Ohio State (Big Ten) | 4-1 |
-| 7 | BYU (Big 12) | 4-0 |
-| 8 | Georgia (SEC) | 5-0 |
-| 9 | Oregon (Big Ten) | 3-1 |
-| 10 | Indiana (Big Ten) | 5-0 |
+| 2 | Georgia (SEC) | 6-0 |
+| 3 | Notre Dame | 6-0 |
+| 4 | Alabama (SEC) | 5-1 |
+| 5 | Indiana (Big Ten) | 6-0 |
+| 6 | Texas Tech (Big 12) | 5-0 |
+| 7 | UCLA (Big Ten) | 5-0 |
+| 8 | Wake Forest (ACC) | 5-1 |
+| 9 | BYU (Big 12) | 5-0 |
+| 10 | Texas (SEC) | 4-1 |
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
 
@@ -45,7 +45,7 @@ The weekly tables, schedule strength included, and the history of the fitted set
 pip install -r requirements.txt
 cp .env.example .env              # add a free key from collegefootballdata.com/key
 python season_history.py --year 2026
-python fit_to_games.py --year 2026 --through 5
+python fit_to_games.py --year 2026 --through 6
 python tests/test_synthetic.py    # made-up seasons with known strengths, no key needed
 ```
 

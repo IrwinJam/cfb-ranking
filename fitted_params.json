@@ -1,19 +1,19 @@
 {
-  "through_week": 5,
+  "through_week": 6,
   "year": 2026,
   "source": "game results",
   "params": {
-    "group_game_weight": 1.9144,
+    "group_game_weight": 1.746,
     "nonp4_win_weight": 0.0,
-    "k": 4.991,
-    "tau": 8.1995,
-    "kappa0": 9.9959,
-    "prior_shrink": 0.8972,
-    "hfa_scale": 1.8714,
-    "upset_bonus": 0.5717,
+    "k": 4.7511,
+    "tau": 7.538,
+    "kappa0": 9.0891,
+    "prior_shrink": 0.982,
+    "hfa_scale": 1.8026,
+    "upset_bonus": 0.7018,
     "beta_late": 0.5,
-    "sigma_g": 12.622
+    "sigma_g": 12.7034
   },
-  "logloss_default": 0.5797,
-  "logloss_fit": 0.5254
+  "logloss_default": 0.5877,
+  "logloss_fit": 0.5453
 }
