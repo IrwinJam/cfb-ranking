@@ -48,7 +48,7 @@ The AP poll released after week 6 games, with the board's rank for each team. A 
 | 2 | Notre Dame | 3 | -1 |
 | 3 | Miami | 1 | +2 |
 | 4 | Ohio State | 13 | -9 |
-| 5 | Indiana | 5 | +0 |
+| 5 | Indiana | 5 | 0 |
 | 6 | Alabama | 4 | +2 |
 | 7 | Texas | 10 | -3 |
 | 8 | BYU | 9 | -1 |
