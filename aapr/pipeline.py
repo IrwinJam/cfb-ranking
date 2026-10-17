@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 
+from .components import blended_strength, points_prior
 from .config import INDEPENDENT, INDEPENDENT_TEAMS, TOP_GROUP, Params
 from .ratings import fit_ratings, resume_scores, win_prob
 from .schedule import schedule_table
@@ -37,11 +38,18 @@ def run_week(provider, year: int, week: int, params: Params = Params(), prior="s
     played = games[(games.week <= week) & games.homePoints.notna() & games.awayPoints.notna()]
     theta0 = preseason_prior(provider, year, params, prior, p4_all)
     theta, h, sd = fit_ratings(played, week, params, theta0, p4_all)
+    # offense and defense from the scoreboard, blended into the margin rating (the strength used from here on)
+    fbs = set(teams.school)
+    bl = blended_strength(theta, h, played, week, params, points_prior(provider, year, params, p4_all, fbs) if prior != "none" else None,
+                          p4_all, None, fbs)
+    theta_margin, theta, h = theta, bl["R"], bl["hfa"]
+    sd = sd * (1 - params.od_weight)
+    sigma = params.sigma_blend
     var = sd ** 2
 
     p4 = sorted(t for t, c in conf.items() if c in TOP_GROUP and t in theta.index)
     bubble = theta.reindex(p4).sort_values(ascending=False).iloc[min(24, len(p4) - 1)]
-    resume = resume_scores(played, theta, h, bubble, params.sigma_g, p4_all, params.nonp4_win_weight,
+    resume = resume_scores(played, theta, h, bubble, sigma, p4_all, params.nonp4_win_weight,
                            params.group_game_weight)
 
     beta = params.beta_early + (params.beta_late - params.beta_early) * min(week / params.beta_ramp_weeks, 1)
@@ -62,13 +70,16 @@ def run_week(provider, year: int, week: int, params: Params = Params(), prior="s
     rows = []
     for t in p4:
         o, site = nxt.get(t, (None, 0))
-        wp = win_prob(theta[t], theta[o], site, h, var[t], var[o], params.sigma_g) if o in theta.index else np.nan
+        wp = win_prob(theta[t], theta[o], site, h, var[t], var[o], sigma) if o in theta.index else np.nan
         rows.append(dict(team=t, conference=conf[t],
                          record=f"{int(wl.loc[t, 'sum'])}-{int(wl.loc[t, 'count'] - wl.loc[t, 'sum'])}",
-                         theta=theta[t], resume=resume.get(t, 0.0), score=score[t], next_opp=o, next_win_prob=wp))
+                         theta=theta[t], theta_margin=theta_margin[t], off=bl["O"].get(t, np.nan), dfn=bl["D"].get(t, np.nan),
+                         net_pts=bl["ND"].get(t, np.nan), resume=resume.get(t, 0.0), score=score[t], next_opp=o, next_win_prob=wp))
     out = pd.DataFrame(rows).sort_values("score", ascending=False).reset_index(drop=True)
     out.insert(0, "rank", out.index + 1)
+    for col, rk in (("off", "off_rank"), ("dfn", "def_rank"), ("net_pts", "net_rank")):
+        out[rk] = out[col].rank(ascending=False, method="min")
     sch = schedule_table(games, theta, {}, week, out.set_index("team")["rank"], set(p4), h)
     out = out.merge(sch[["team", "sos_played", "sos_played_rank", "sos_remaining", "sos_remaining_rank", "sos_all_rank",
                          "top25_wins", "top25_losses", "best_win"]], on="team", how="left")
-    return dict(rankings=out, theta=theta, hfa=h, beta=beta)
+    return dict(rankings=out, theta=theta, theta_margin=theta_margin, hfa=h, beta=beta)

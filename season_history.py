@@ -8,6 +8,7 @@ from pathlib import Path
 import pandas as pd
 
 from aapr.cfbd_client import CFBDProvider
+from aapr.components import add_component_ranks
 from aapr.params_io import load_params
 from aapr.pipeline import run_week
 from aapr.schedule import schedule_table
@@ -31,6 +32,7 @@ out.mkdir(parents=True, exist_ok=True)
 runs, ranks = {}, {}
 for w in range(1, last + 1):
     runs[w] = run_week(prov, a.year, w, params, prior=a.prior)
+    runs[w]["rankings"] = add_component_ranks(runs[w]["rankings"], prov, a.year, w, games)
     runs[w]["rankings"].to_csv(out / f"week{w}_aapr.csv", index=False)
     ranks[w] = runs[w]["rankings"].set_index("team")["rank"]
 

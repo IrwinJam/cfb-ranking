@@ -12,6 +12,10 @@ from aapr.synthetic import SyntheticProvider
 
 prov = SyntheticProvider()
 r = run_week(prov, 2025, 12, Params(), prior="none")["rankings"].set_index("team")
-corr = np.corrcoef(r.theta, prov.true.reindex(r.index))[0, 1]
-print(f"correlation of fitted ratings with true strengths after 12 weeks: {corr:.3f}")
+truth = prov.true.reindex(r.index)
+corr = np.corrcoef(r.theta_margin, truth)[0, 1]
+print(f"correlation of the margin ratings with true strengths after 12 weeks: {corr:.3f}")
 assert corr > 0.85
+blend = np.corrcoef(r.theta, truth)[0, 1]
+print(f"correlation of the blended strength with true strengths: {blend:.3f}")
+assert blend > 0.6

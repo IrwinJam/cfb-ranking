@@ -8,3 +8,4 @@ __pycache__/
 outputs/*.txt
 outputs/site_test/
 outputs/refresh_log.txt
+research/*.pkl
