@@ -54,25 +54,25 @@ The AP poll released after week 6 games, with the board's rank for each team. A 
 | 4 | Ohio State | 4 | 0 |
 | 5 | Indiana | 9 | -4 |
 | 6 | Alabama | 3 | +3 |
-| 7 | Texas | 17 | -10 |
+| 7 | Texas | 18 | -11 |
 | 8 | BYU | 1 | +7 |
 | 9 | Ole Miss | 2 | +7 |
 | 10 | Texas Tech | 8 | +2 |
 | 11 | Utah | 11 | 0 |
 | 12 | UCLA | 12 | 0 |
-| 13 | Missouri | 23 | -10 |
+| 13 | Missouri | 22 | -9 |
 | 14 | Tennessee | 13 | +1 |
 | 15 | Kentucky | 6 | +9 |
 | 16 | Mississippi State | 24 | -8 |
 | 17 | Iowa | 15 | +2 |
 | 18 | Oklahoma State | 28 | -10 |
-| 19 | USC | 25 | -6 |
+| 19 | USC | 26 | -7 |
 | 20 | Houston | 14 | +6 |
 | 21 | Wake Forest | 19 | +2 |
 | 22 | LSU | 16 | +6 |
 | 23 | Boise State | - | - |
 | 24 | SMU | 29 | -5 |
-| 25 | Northwestern | 26 | -1 |
+| 25 | Northwestern | 25 | 0 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
