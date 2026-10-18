@@ -16,63 +16,63 @@ The ranking score blends the rating with a resume measure, which is wins above w
 
 ## Choosing the settings
 
-The settings were fit twice. The first fit used game results: ratings through week g predict the games of week g+1, scored by log-loss over 194 games involving a top-group team. The second fit matched the AP poll. Each was then scored on weeks it had not been fit on: one week is held out, the settings are refit on the rest, and that week is predicted.
+The settings were fit twice. The first fit used game results: ratings through week g predict the games of week g+1, scored by log-loss over 222 games involving a top-group team. The second fit matched the AP poll. Each was then scored on weeks it had not been fit on: one week is held out, the settings are refit on the rest, and that week is predicted.
 
 | Settings | Mean held-out log-loss |
 |---|---|
-| Fit to game results | 0.584 |
-| Hand-picked defaults | 0.592 |
-| Fit to the AP poll | 0.639 |
+| Fit to game results | 0.605 |
+| Hand-picked defaults | 0.615 |
+| Fit to the AP poll | 0.668 |
 
 These settings belong to the margin rating, and they were fit before the points rating was added. A coin flip scores 0.693 and lower is better. The AP fit matches the poll more closely and predicts games worse, which is why the game-results fit is the one in use (`fitted_params.json`). The AP fit is kept for comparison in `fitted_params_ap.json`.
 
-## Rankings through week 6, 2026
+## Rankings through week 7, 2026
 
 | # | Team | Record |
 |---|------|--------|
-| 1 | Alabama (SEC) | 5-1 |
-| 2 | Georgia (SEC) | 6-0 |
-| 3 | Notre Dame | 6-0 |
-| 4 | BYU (Big 12) | 5-0 |
-| 5 | Texas Tech (Big 12) | 5-0 |
-| 6 | Indiana (Big Ten) | 6-0 |
-| 7 | Miami (ACC) | 5-0 |
-| 8 | Texas (SEC) | 4-1 |
-| 9 | Kentucky (SEC) | 5-1 |
-| 10 | UCLA (Big Ten) | 5-0 |
+| 1 | BYU (Big 12) | 6-0 |
+| 2 | Ole Miss (SEC) | 5-1 |
+| 3 | Alabama (SEC) | 5-2 |
+| 4 | Ohio State (Big Ten) | 6-1 |
+| 5 | Notre Dame | 6-1 |
+| 6 | Kentucky (SEC) | 6-1 |
+| 7 | Miami (ACC) | 6-0 |
+| 8 | Texas Tech (Big 12) | 6-0 |
+| 9 | Indiana (Big Ten) | 6-1 |
+| 10 | Georgia (SEC) | 6-1 |
 
 <!-- ap:start -->
-## AP Top 25 and the board, through week 6
+## AP Top 25 and the board, through week 7
 
 The AP poll released after week 6 games, with the board's rank for each team. A team outside the Power Four group has no board rank. A positive gap means the board has the team higher.
 
 | AP | Team | Board | Gap |
 |---|------|-------|-----|
-| 1 | Georgia | 2 | -1 |
-| 2 | Notre Dame | 3 | -1 |
+| 1 | Georgia | 10 | -9 |
+| 2 | Notre Dame | 5 | -3 |
 | 3 | Miami | 7 | -4 |
-| 4 | Ohio State | 15 | -11 |
-| 5 | Indiana | 6 | -1 |
-| 6 | Alabama | 1 | +5 |
-| 7 | Texas | 8 | -1 |
-| 8 | BYU | 4 | +4 |
-| 9 | Ole Miss | 13 | -4 |
-| 10 | Texas Tech | 5 | +5 |
+| 4 | Ohio State | 4 | 0 |
+| 5 | Indiana | 9 | -4 |
+| 6 | Alabama | 3 | +3 |
+| 7 | Texas | 17 | -10 |
+| 8 | BYU | 1 | +7 |
+| 9 | Ole Miss | 2 | +7 |
+| 10 | Texas Tech | 8 | +2 |
 | 11 | Utah | 11 | 0 |
-| 12 | UCLA | 10 | +2 |
-| 13 | Missouri | 19 | -6 |
-| 14 | Tennessee | 24 | -10 |
-| 15 | Kentucky | 9 | +6 |
-| 16 | Mississippi State | 17 | -1 |
-| 17 | Iowa | 14 | +3 |
-| 18 | Oklahoma State | 26 | -8 |
+| 12 | UCLA | 12 | 0 |
+| 13 | Missouri | 23 | -10 |
+| 14 | Tennessee | 13 | +1 |
+| 15 | Kentucky | 6 | +9 |
+| 16 | Mississippi State | 24 | -8 |
+| 17 | Iowa | 15 | +2 |
+| 18 | Oklahoma State | 28 | -10 |
 | 19 | USC | 25 | -6 |
-| 20 | Houston | 16 | +4 |
-| 21 | Wake Forest | 12 | +9 |
-| 22 | LSU | 22 | 0 |
+| 20 | Houston | 14 | +6 |
+| 21 | Wake Forest | 19 | +2 |
+| 22 | LSU | 16 | +6 |
 | 23 | Boise State | - | - |
-| 24 | SMU | 32 | -8 |
-| 25 | Northwestern | 20 | +5 |
+| 24 | SMU | 29 | -5 |
+| 25 | Northwestern | 26 | -1 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
@@ -83,7 +83,7 @@ The weekly tables, schedule strength included, and the history of the fitted set
 pip install -r requirements.txt
 cp .env.example .env              # add a free key from collegefootballdata.com/key
 python season_history.py --year 2026
-python fit_to_games.py --year 2026 --through 6
+python fit_to_games.py --year 2026 --through 7
 python research/rule_eval.py      # the walk-forward test behind the blend
 python tests/test_synthetic.py    # made-up seasons with known strengths, no key needed
 ```
