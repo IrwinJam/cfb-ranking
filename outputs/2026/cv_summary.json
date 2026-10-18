@@ -1,8 +1,8 @@
 {
   "through_week": 7,
-  "n_games": 222,
+  "n_games": 225,
   "weeks": 6,
-  "fitted": 0.605,
-  "defaults": 0.6151,
-  "ap_fitted": 0.6676
+  "fitted": 0.5988,
+  "defaults": 0.6085,
+  "ap_fitted": 0.6577
 }

@@ -3,17 +3,17 @@
   "year": 2026,
   "source": "game results",
   "params": {
-    "group_game_weight": 1.5492,
+    "group_game_weight": 1.5777,
     "nonp4_win_weight": 0.0,
-    "k": 4.2304,
-    "tau": 7.6128,
-    "kappa0": 7.8846,
-    "prior_shrink": 1.0358,
-    "hfa_scale": 1.9795,
-    "upset_bonus": 0.5997,
+    "k": 4.2977,
+    "tau": 7.5168,
+    "kappa0": 7.8642,
+    "prior_shrink": 1.0338,
+    "hfa_scale": 1.9269,
+    "upset_bonus": 0.582,
     "beta_late": 0.5,
-    "sigma_g": 13.4306
+    "sigma_g": 13.2321
   },
-  "logloss_default": 0.6059,
-  "logloss_fit": 0.5677
+  "logloss_default": 0.6022,
+  "logloss_fit": 0.5654
 }

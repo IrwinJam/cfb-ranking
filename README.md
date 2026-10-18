@@ -16,13 +16,13 @@ The ranking score blends the rating with a resume measure, which is wins above w
 
 ## Choosing the settings
 
-The settings were fit twice. The first fit used game results: ratings through week g predict the games of week g+1, scored by log-loss over 222 games involving a top-group team. The second fit matched the AP poll. Each was then scored on weeks it had not been fit on: one week is held out, the settings are refit on the rest, and that week is predicted.
+The settings were fit twice. The first fit used game results: ratings through week g predict the games of week g+1, scored by log-loss over 225 games involving a top-group team. The second fit matched the AP poll. Each was then scored on weeks it had not been fit on: one week is held out, the settings are refit on the rest, and that week is predicted.
 
 | Settings | Mean held-out log-loss |
 |---|---|
-| Fit to game results | 0.605 |
-| Hand-picked defaults | 0.615 |
-| Fit to the AP poll | 0.668 |
+| Fit to game results | 0.599 |
+| Hand-picked defaults | 0.609 |
+| Fit to the AP poll | 0.658 |
 
 These settings belong to the margin rating, and they were fit before the points rating was added. A coin flip scores 0.693 and lower is better. The AP fit matches the poll more closely and predicts games worse, which is why the game-results fit is the one in use (`fitted_params.json`). The AP fit is kept for comparison in `fitted_params_ap.json`.
 
@@ -34,9 +34,9 @@ These settings belong to the margin rating, and they were fit before the points 
 | 2 | Ole Miss (SEC) | 5-1 |
 | 3 | Alabama (SEC) | 5-2 |
 | 4 | Ohio State (Big Ten) | 6-1 |
-| 5 | Notre Dame | 6-1 |
-| 6 | Kentucky (SEC) | 6-1 |
-| 7 | Miami (ACC) | 6-0 |
+| 5 | Miami (ACC) | 6-0 |
+| 6 | Notre Dame | 6-1 |
+| 7 | Kentucky (SEC) | 6-1 |
 | 8 | Texas Tech (Big 12) | 6-0 |
 | 9 | Indiana (Big Ten) | 6-1 |
 | 10 | Georgia (SEC) | 6-1 |
@@ -49,8 +49,8 @@ The AP poll released after week 6 games, with the board's rank for each team. A 
 | AP | Team | Board | Gap |
 |---|------|-------|-----|
 | 1 | Georgia | 10 | -9 |
-| 2 | Notre Dame | 5 | -3 |
-| 3 | Miami | 7 | -4 |
+| 2 | Notre Dame | 6 | -4 |
+| 3 | Miami | 5 | -2 |
 | 4 | Ohio State | 4 | 0 |
 | 5 | Indiana | 9 | -4 |
 | 6 | Alabama | 3 | +3 |
@@ -59,20 +59,20 @@ The AP poll released after week 6 games, with the board's rank for each team. A 
 | 9 | Ole Miss | 2 | +7 |
 | 10 | Texas Tech | 8 | +2 |
 | 11 | Utah | 11 | 0 |
-| 12 | UCLA | 12 | 0 |
-| 13 | Missouri | 22 | -9 |
-| 14 | Tennessee | 13 | +1 |
-| 15 | Kentucky | 6 | +9 |
-| 16 | Mississippi State | 24 | -8 |
-| 17 | Iowa | 15 | +2 |
-| 18 | Oklahoma State | 28 | -10 |
-| 19 | USC | 26 | -7 |
+| 12 | UCLA | 13 | -1 |
+| 13 | Missouri | 24 | -11 |
+| 14 | Tennessee | 12 | +2 |
+| 15 | Kentucky | 7 | +8 |
+| 16 | Mississippi State | 25 | -9 |
+| 17 | Iowa | 16 | +1 |
+| 18 | Oklahoma State | 29 | -11 |
+| 19 | USC | 27 | -8 |
 | 20 | Houston | 14 | +6 |
-| 21 | Wake Forest | 19 | +2 |
-| 22 | LSU | 16 | +6 |
+| 21 | Wake Forest | 15 | +6 |
+| 22 | LSU | 17 | +5 |
 | 23 | Boise State | - | - |
-| 24 | SMU | 29 | -5 |
-| 25 | Northwestern | 25 | 0 |
+| 24 | SMU | 28 | -4 |
+| 25 | Northwestern | 23 | +2 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
