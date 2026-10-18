@@ -44,35 +44,35 @@ These settings belong to the margin rating, and they were fit before the points 
 <!-- ap:start -->
 ## AP Top 25 and the board, through week 7
 
-The AP poll released after week 6 games, with the board's rank for each team. A team outside the Power Four group has no board rank. A positive gap means the board has the team higher.
+The AP poll released after week 7 games, with the board's rank for each team. A team outside the Power Four group has no board rank. A positive gap means the board has the team higher.
 
 | AP | Team | Board | Gap |
 |---|------|-------|-----|
-| 1 | Georgia | 10 | -9 |
-| 2 | Notre Dame | 6 | -4 |
-| 3 | Miami | 5 | -2 |
-| 4 | Ohio State | 4 | 0 |
-| 5 | Indiana | 9 | -4 |
-| 6 | Alabama | 3 | +3 |
-| 7 | Texas | 18 | -11 |
-| 8 | BYU | 1 | +7 |
-| 9 | Ole Miss | 2 | +7 |
-| 10 | Texas Tech | 8 | +2 |
-| 11 | Utah | 11 | 0 |
-| 12 | UCLA | 13 | -1 |
-| 13 | Missouri | 24 | -11 |
-| 14 | Tennessee | 12 | +2 |
-| 15 | Kentucky | 7 | +8 |
-| 16 | Mississippi State | 25 | -9 |
-| 17 | Iowa | 16 | +1 |
-| 18 | Oklahoma State | 29 | -11 |
-| 19 | USC | 27 | -8 |
-| 20 | Houston | 14 | +6 |
-| 21 | Wake Forest | 15 | +6 |
-| 22 | LSU | 17 | +5 |
-| 23 | Boise State | - | - |
-| 24 | SMU | 28 | -4 |
-| 25 | Northwestern | 23 | +2 |
+| 1 | Miami | 5 | -4 |
+| 2 | BYU | 1 | +1 |
+| 3 | Ohio State | 4 | -1 |
+| 4 | Notre Dame | 6 | -2 |
+| 5 | Georgia | 10 | -5 |
+| 6 | Indiana | 9 | -3 |
+| 7 | Ole Miss | 2 | +5 |
+| 8 | Texas Tech | 8 | 0 |
+| 9 | UCLA | 13 | -4 |
+| 10 | Utah | 11 | -1 |
+| 11 | Tennessee | 12 | -1 |
+| 12 | Kentucky | 7 | +5 |
+| 13 | Alabama | 3 | +10 |
+| 14 | Houston | 14 | 0 |
+| 15 | Iowa | 16 | -1 |
+| 16 | USC | 27 | -11 |
+| 17 | Wake Forest | 15 | +2 |
+| 18 | LSU | 17 | +1 |
+| 19 | Texas | 18 | +1 |
+| 20 | Florida | 21 | -1 |
+| 21 | Boise State | - | - |
+| 22 | Missouri | 24 | -2 |
+| 23 | SMU | 28 | -5 |
+| 24 | Northwestern | 23 | +1 |
+| 25 | Arizona | 19 | +6 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
