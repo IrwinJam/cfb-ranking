@@ -50,7 +50,7 @@ def run_week(provider, year: int, week: int, params: Params = Params(), prior="s
     p4 = sorted(t for t, c in conf.items() if c in TOP_GROUP and t in theta.index)
     bubble = theta.reindex(p4).sort_values(ascending=False).iloc[min(24, len(p4) - 1)]
     resume = resume_scores(played, theta, h, bubble, sigma, p4_all, params.nonp4_win_weight,
-                           params.group_game_weight)
+                           params.group_game_weight, params.loss_penalty)
 
     beta = params.beta_early + (params.beta_late - params.beta_early) * min(week / params.beta_ramp_weeks, 1)
     sos = schedule_table(games, theta, {}, week, pd.Series(dtype=float), set(p4), h).set_index("team")["sos_played"]

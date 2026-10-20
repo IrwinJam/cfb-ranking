@@ -98,8 +98,10 @@ def win_prob(p_team, p_opp, site, h, var_team, var_opp, sigma_g):
 
 def resume_scores(played: pd.DataFrame, theta: pd.Series, h: float, bubble_theta: float,
                   sigma_g: float, p4: set | None = None, nonp4_win_weight: float = 1.0,
-                  group_weight: float = 1.0) -> pd.Series:
-    """Wins above a bubble team: per game, the result minus the chance the bubble team would have won."""
+                  group_weight: float = 1.0, loss_penalty: float = 0.0) -> pd.Series:
+    """Wins above a bubble team: per game, the result minus the chance the bubble team would have won, less loss_penalty per loss.
+
+    Without the penalty a loss to a strong team is nearly free, since a bubble team would usually lose that game too."""
     rows = []
     for r in played.itertuples():
         hs = 0.0 if r.neutralSite else 1.0
@@ -113,6 +115,6 @@ def resume_scores(played: pd.DataFrame, theta: pd.Series, h: float, bubble_theta
             if r.awayTeam in p4 and r.homeTeam not in p4 and res < 1:
                 wa = nonp4_win_weight
         gw = group_weight if p4 and r.homeTeam in p4 and r.awayTeam in p4 else 1.0
-        rows.append((r.homeTeam, gw * wh * (res - pb_h)))
-        rows.append((r.awayTeam, gw * wa * ((1 - res) - pb_a)))
+        rows.append((r.homeTeam, gw * wh * (res - pb_h) - loss_penalty * (1 - res)))
+        rows.append((r.awayTeam, gw * wa * ((1 - res) - pb_a) - loss_penalty * res))
     return pd.DataFrame(rows, columns=["team", "r"]).groupby("team")["r"].sum()
