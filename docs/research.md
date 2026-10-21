@@ -83,4 +83,4 @@ How closely each version matches the AP poll released after the same games (rank
 | Strength alone | 0.698 | 0.725 |
 | Resume alone | 0.785 | 0.649 |
 
-Taking the separate schedule term out agrees with the poll better in both seasons. It is also the logical part to take out: the resume already measures how hard the schedule was (it is wins against what a bubble team would win on that schedule), and the strength rating is already opponent-adjusted. The board still uses the current score; this is the change under consideration.
+Taking the separate schedule term out agrees with the poll better in both seasons. It is also the logical part to take out: the resume already measures how hard the schedule was (it is wins against what a bubble team would win on that schedule), and the strength rating is already opponent-adjusted. The board now ranks with resume and strength only (schedule weight 0), mixed as `beta` of strength, which rises from 30% in week 1 to 50% from week 12. The Rankings Board has a Resume & strength page where the mix can be moved from resume only to strength only.
