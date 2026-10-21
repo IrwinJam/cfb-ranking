@@ -31,15 +31,15 @@ These settings belong to the margin rating, and they were fit before the points 
 | # | Team | Record |
 |---|------|--------|
 | 1 | BYU (Big 12) | 6-0 |
-| 2 | Ole Miss (SEC) | 5-1 |
-| 3 | Alabama (SEC) | 5-2 |
-| 4 | Ohio State (Big Ten) | 6-1 |
-| 5 | Miami (ACC) | 6-0 |
-| 6 | Notre Dame | 6-1 |
-| 7 | Kentucky (SEC) | 6-1 |
-| 8 | Texas Tech (Big 12) | 6-0 |
-| 9 | Indiana (Big Ten) | 6-1 |
-| 10 | Georgia (SEC) | 6-1 |
+| 2 | Miami (ACC) | 6-0 |
+| 3 | Ohio State (Big Ten) | 6-1 |
+| 4 | Texas Tech (Big 12) | 6-0 |
+| 5 | Notre Dame | 6-1 |
+| 6 | Ole Miss (SEC) | 5-1 |
+| 7 | Utah (Big 12) | 6-0 |
+| 8 | Indiana (Big Ten) | 6-1 |
+| 9 | Georgia (SEC) | 6-1 |
+| 10 | Alabama (SEC) | 5-2 |
 
 <!-- ap:start -->
 ## AP Top 25 and the board, through week 7
@@ -48,31 +48,31 @@ The AP poll released after week 7 games, with the board's rank for each team. A 
 
 | AP | Team | Board | Gap |
 |---|------|-------|-----|
-| 1 | Miami | 5 | -4 |
+| 1 | Miami | 2 | -1 |
 | 2 | BYU | 1 | +1 |
-| 3 | Ohio State | 4 | -1 |
-| 4 | Notre Dame | 6 | -2 |
-| 5 | Georgia | 10 | -5 |
-| 6 | Indiana | 9 | -3 |
-| 7 | Ole Miss | 2 | +5 |
-| 8 | Texas Tech | 8 | 0 |
-| 9 | UCLA | 13 | -4 |
-| 10 | Utah | 11 | -1 |
-| 11 | Tennessee | 12 | -1 |
-| 12 | Kentucky | 7 | +5 |
-| 13 | Alabama | 3 | +10 |
-| 14 | Houston | 14 | 0 |
+| 3 | Ohio State | 3 | 0 |
+| 4 | Notre Dame | 5 | -1 |
+| 5 | Georgia | 9 | -4 |
+| 6 | Indiana | 8 | -2 |
+| 7 | Ole Miss | 6 | +1 |
+| 8 | Texas Tech | 4 | +4 |
+| 9 | UCLA | 11 | -2 |
+| 10 | Utah | 7 | +3 |
+| 11 | Tennessee | 14 | -3 |
+| 12 | Kentucky | 13 | -1 |
+| 13 | Alabama | 10 | +3 |
+| 14 | Houston | 15 | -1 |
 | 15 | Iowa | 16 | -1 |
-| 16 | USC | 27 | -11 |
-| 17 | Wake Forest | 15 | +2 |
-| 18 | LSU | 17 | +1 |
-| 19 | Texas | 18 | +1 |
-| 20 | Florida | 21 | -1 |
+| 16 | USC | 25 | -9 |
+| 17 | Wake Forest | 12 | +5 |
+| 18 | LSU | 18 | 0 |
+| 19 | Texas | 24 | -5 |
+| 20 | Florida | 20 | 0 |
 | 21 | Boise State | - | - |
-| 22 | Missouri | 24 | -2 |
-| 23 | SMU | 28 | -5 |
-| 24 | Northwestern | 23 | +1 |
-| 25 | Arizona | 19 | +6 |
+| 22 | Missouri | 21 | +1 |
+| 23 | SMU | 26 | -3 |
+| 24 | Northwestern | 19 | +5 |
+| 25 | Arizona | 17 | +8 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
