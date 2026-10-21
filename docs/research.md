@@ -84,3 +84,27 @@ How closely each version matches the AP poll released after the same games (rank
 | Resume alone | 0.785 | 0.649 |
 
 Taking the separate schedule term out agrees with the poll better in both seasons. It is also the logical part to take out: the resume already measures how hard the schedule was (it is wins against what a bubble team would win on that schedule), and the strength rating is already opponent-adjusted. The board now ranks with resume and strength only (schedule weight 0), mixed as `beta` of strength, which rises from 30% in week 1 to 50% from week 12. The Rankings Board has a Resume & strength page where the mix can be moved from resume only to strength only.
+
+## The bubble team and the cap on strength
+
+Two choices in the board score were set by hand: the resume compares each team's results with a team at the 25th rating, and strength gets 30% of the score in week 1 rising to 50% by week 12. `research/rank_review4.py` tests both over 2025 and 2026. The columns are the log-loss on next week's games between top-group teams, the share of played games the better-scored team won (all games, then pairs of top-25 teams), and the rank correlation with the AP poll.
+
+| Bubble team | Log-loss | Explained | Top-25 pairs | AP |
+|---|---|---|---|---|
+| 8th | 0.582 | 0.849 | 0.793 | 0.809 |
+| 12th | 0.581 | 0.849 | 0.785 | 0.813 |
+| 18th | 0.580 | 0.850 | 0.776 | 0.822 |
+| 25th (now) | 0.580 | 0.850 | 0.761 | 0.818 |
+| 40th | 0.579 | 0.849 | 0.742 | 0.809 |
+
+| Strength weight by week 12 | Log-loss | Explained | Top-25 pairs | AP |
+|---|---|---|---|---|
+| 0.3 | 0.589 | 0.851 | 0.791 | 0.819 |
+| 0.4 | 0.584 | 0.850 | 0.770 | 0.823 |
+| 0.5 (now) | 0.580 | 0.850 | 0.761 | 0.818 |
+| 0.6 | 0.575 | 0.847 | 0.770 | 0.812 |
+| 0.8 | 0.567 | 0.838 | 0.774 | 0.781 |
+| 1.0 | 0.560 | 0.830 | 0.750 | 0.752 |
+
+The bubble barely matters for prediction, and a bubble nearer the top separates the top-25 pairs better. The 12th team is the cut line for the playoff field. The strength weight trades one thing for another: more strength predicts better and explains played games worse, with the break near 0.5, so the cap is a choice about what the score is for and not a fitted optimum. A constant 0.5 from week 1 predicts slightly better than the ramp (0.570 against 0.580) and explains slightly worse (0.847 against 0.850).
+
