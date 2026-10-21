@@ -18,7 +18,7 @@ class Params:
     beta_late: float = 0.50
     beta_ramp_weeks: int = 12
     sos_weight: float = 0.15        # hand-set, not fitted
-    loss_penalty: float = 2.0       # resume points off for every loss, whoever it was to; see docs/research.md
+    loss_penalty: float = 0.0       # resume points off for every loss; tried at 2 and reverted, see docs/research.md
     group_game_weight: float = 1.5  # games between two top-group teams
     hfa_scale: float = 1.0          # scale on the estimated home-field edge
     upset_bonus: float = 0.0        # extra weight when the lower-rated team wins

@@ -60,29 +60,27 @@ python research/backtest.py
 python research/stack.py
 ```
 
-## What a loss costs in the board score
+## What a loss costs in the board score (a flat loss penalty was tried and reverted)
 
-The board score is the resume (wins above a bubble team), the forward strength and the strength of the schedule played, as z-scores. It is a ranking of who has earned a place, so a loss should cost something. In week 6 of 2026, Alabama lost 17-20 at home to the 6-0 team that was rated second, and kept the #1 spot, still above the team that beat it. That looked wrong, so I checked how losses move the score across 2025 and 2026 (`research/rank_review.py`, `research/rank_review2.py`).
+The board score is the resume (wins above a bubble team), the forward strength and the strength of the schedule played, as z-scores. In week 6 of 2026 Alabama lost 17-20 at home to the 6-0 team rated second and kept #1, still above the team that beat them. The scripts `research/rank_review.py`, `rank_review2.py` and `rank_review3.py` look at why, over 2025 and 2026.
 
-What the review found:
+What they found:
 
-- Across the 91 losses by teams ranked in the top 25 the week before, the average team fell 7.5 places and 9% did not fall at all. Alabama's week 6 was among the cheapest of the 91, so the cost is not one team's quirk.
-- The resume credits a result against what a bubble team would have done. Losing to a strong team is a game the bubble team would usually lose too, so the loss costs a fraction of a point (0.38 of the resume in the synthetic test, against a twin that lost nothing), where a win over a weak team is worth about as much.
-- The schedule term pays again for the same fact. Playing a strong opponent already lifts the resume and then lifts the schedule score, win or lose. With the schedule term at 15% the average drop after a loss is 0.28 z, against 0.37 with no schedule term.
-- Losses to stronger opponents cost 0.24 z and losses to weaker ones 0.35 z, which is the intended direction but too steep a discount.
+- Across the 91 losses by teams ranked in the top 25 the week before, the average team fell 7.5 places and 9% did not fall at all. Alabama's week 6 was among the mildest, so it is not one team.
+- The resume scores a result against what a bubble team would have done. A bubble team usually loses to a strong team too, so that loss costs a fraction of a point.
+- The schedule term then pays for the same strong opponent a second time, whether the game was won or lost. With the term the average drop after a loss is 0.28 z, without it 0.37.
 
-How other systems handle it: ESPN's Strength of Record asks how likely an average top-25 team is to match a team's record against its schedule, so it counts wins and losses and not margins. Résumé SP+ projects the margin an average top-five team would have against the schedule and then takes 7 points off for every loss. Colley's method uses results only. FPI is a predictive rating and is not meant to rank who has earned a place. A common view of the résumé kind is that a win should never hurt a team and a loss should never help it. The score here let a loss to a strong team come out nearly free, which the flat penalty in Résumé SP+ does not.
+A flat penalty of 2 resume points per loss (the idea behind Résumé SP+'s 7 points a loss) was tried. It kept the games explained and the log-loss where they were (0.578 against 0.579) and fixed the Alabama case, but it lifted Texas Tech, 6-0 against a weak schedule, to second, which no one believes. It was reverted: the parameter stays in the code at 0.
 
-The fix is a flat penalty per loss inside the resume, whoever the loss was to. Here is how it scores, with the schedule term at 15% (explained is the share of played games where the winner has the higher score; the log-loss is on next week's games between top-group teams, and a coin flip is 0.693):
+How closely each version matches the AP poll released after the same games (rank correlation among the teams the poll ranks, fitted on nothing, 2025 / 2026):
 
-| Penalty per loss | Explained, all games | Explained, top-25 vs top-25 | Log-loss | Alabama, week 7 |
-|---|---|---|---|---|
-| 0 (before) | 0.845 | 0.774 | 0.578 | 3rd |
-| 1 | 0.842 | 0.773 | 0.578 | 7th |
-| 2 (now) | 0.842 | 0.791 | 0.579 | 9th |
-| 3 | 0.843 | 0.790 | 0.579 | 10th |
+| Score | 2025 | 2026 |
+|---|---|---|
+| Current board score | 0.775 | 0.797 |
+| Current plus a loss penalty of 2 | 0.804 | 0.813 |
+| Without the separate schedule term | 0.813 | 0.833 |
+| Resume 60% and strength 40% | 0.823 | 0.838 |
+| Strength alone | 0.698 | 0.725 |
+| Resume alone | 0.785 | 0.649 |
 
-The penalty does not change how well the score predicts or explains games overall. Games are not scored by the board score anyway, the strength rating does that (0.544 on the same games, against 0.578 for the full score), and the board score is meant to be a résumé. It does improve the games between two top-25 teams, where it matters most, and it puts Georgia above Alabama in week 6. The penalty is 2 resume points, about one standard deviation of the resume. A schedule term of 8% with no penalty was close on the head-to-head measure but kept losses cheap.
-
-This is a design judgment more than a fitted result: the data show the penalty is harmless to accuracy and helps the head-to-head cases, and the size comes from matching how voters and the other résumé systems treat a loss.
-
+Taking the separate schedule term out agrees with the poll better in both seasons. It is also the logical part to take out: the resume already measures how hard the schedule was (it is wins against what a bubble team would win on that schedule), and the strength rating is already opponent-adjusted. The board still uses the current score; this is the change under consideration.
