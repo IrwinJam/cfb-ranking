@@ -32,14 +32,14 @@ These settings belong to the margin rating, and they were fit before the points 
 |---|------|--------|
 | 1 | BYU (Big 12) | 6-0 |
 | 2 | Miami (ACC) | 6-0 |
-| 3 | Ohio State (Big Ten) | 6-1 |
-| 4 | Texas Tech (Big 12) | 6-0 |
+| 3 | Texas Tech (Big 12) | 6-0 |
+| 4 | Ohio State (Big Ten) | 6-1 |
 | 5 | Notre Dame | 6-1 |
-| 6 | Ole Miss (SEC) | 5-1 |
-| 7 | Utah (Big 12) | 6-0 |
-| 8 | Indiana (Big Ten) | 6-1 |
+| 6 | Utah (Big 12) | 6-0 |
+| 7 | Indiana (Big Ten) | 6-1 |
+| 8 | Ole Miss (SEC) | 5-1 |
 | 9 | Georgia (SEC) | 6-1 |
-| 10 | Alabama (SEC) | 5-2 |
+| 10 | UCLA (Big Ten) | 6-0 |
 
 <!-- ap:start -->
 ## AP Top 25 and the board, through week 7
@@ -50,29 +50,29 @@ The AP poll released after week 7 games, with the board's rank for each team. A 
 |---|------|-------|-----|
 | 1 | Miami | 2 | -1 |
 | 2 | BYU | 1 | +1 |
-| 3 | Ohio State | 3 | 0 |
+| 3 | Ohio State | 4 | -1 |
 | 4 | Notre Dame | 5 | -1 |
 | 5 | Georgia | 9 | -4 |
-| 6 | Indiana | 8 | -2 |
-| 7 | Ole Miss | 6 | +1 |
-| 8 | Texas Tech | 4 | +4 |
-| 9 | UCLA | 11 | -2 |
-| 10 | Utah | 7 | +3 |
-| 11 | Tennessee | 14 | -3 |
-| 12 | Kentucky | 13 | -1 |
-| 13 | Alabama | 10 | +3 |
-| 14 | Houston | 15 | -1 |
+| 6 | Indiana | 7 | -1 |
+| 7 | Ole Miss | 8 | -1 |
+| 8 | Texas Tech | 3 | +5 |
+| 9 | UCLA | 10 | -1 |
+| 10 | Utah | 6 | +4 |
+| 11 | Tennessee | 15 | -4 |
+| 12 | Kentucky | 17 | -5 |
+| 13 | Alabama | 13 | 0 |
+| 14 | Houston | 14 | 0 |
 | 15 | Iowa | 16 | -1 |
-| 16 | USC | 25 | -9 |
-| 17 | Wake Forest | 12 | +5 |
+| 16 | USC | 20 | -4 |
+| 17 | Wake Forest | 11 | +6 |
 | 18 | LSU | 18 | 0 |
-| 19 | Texas | 24 | -5 |
-| 20 | Florida | 20 | 0 |
+| 19 | Texas | 23 | -4 |
+| 20 | Florida | 26 | -6 |
 | 21 | Boise State | - | - |
-| 22 | Missouri | 21 | +1 |
-| 23 | SMU | 26 | -3 |
+| 22 | Missouri | 24 | -2 |
+| 23 | SMU | 22 | +1 |
 | 24 | Northwestern | 19 | +5 |
-| 25 | Arizona | 17 | +8 |
+| 25 | Arizona | 12 | +13 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
