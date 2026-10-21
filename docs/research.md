@@ -108,3 +108,4 @@ Two choices in the board score were set by hand: the resume compares each team's
 
 The bubble barely matters for prediction, and a bubble nearer the top separates the top-25 pairs better. The 12th team is the cut line for the playoff field. The strength weight trades one thing for another: more strength predicts better and explains played games worse, with the break near 0.5, so the cap is a choice about what the score is for and not a fitted optimum. A constant 0.5 from week 1 predicts slightly better than the ramp (0.570 against 0.580) and explains slightly worse (0.847 against 0.850).
 
+The board now uses the 12th team as the bubble (`bubble_rank = 12` in `aapr/config.py`), which is the playoff cutoff. A switch on the Rankings Board moves it back to the 25th, and the Resume & strength page lets you pick any of 8, 12, 18, 25, 32 and 40 for the latest week.

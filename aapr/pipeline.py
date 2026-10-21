@@ -48,7 +48,7 @@ def run_week(provider, year: int, week: int, params: Params = Params(), prior="s
     var = sd ** 2
 
     p4 = sorted(t for t, c in conf.items() if c in TOP_GROUP and t in theta.index)
-    bubble = theta.reindex(p4).sort_values(ascending=False).iloc[min(24, len(p4) - 1)]
+    bubble = theta.reindex(p4).sort_values(ascending=False).iloc[min(params.bubble_rank - 1, len(p4) - 1)]
     resume = resume_scores(played, theta, h, bubble, sigma, p4_all, params.nonp4_win_weight,
                            params.group_game_weight, params.loss_penalty)
 

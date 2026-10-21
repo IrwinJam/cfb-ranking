@@ -19,6 +19,7 @@ class Params:
     beta_ramp_weeks: int = 12
     sos_weight: float = 0.0        # share of the score from the schedule term: 0, since the resume and the strength rating already price the schedule (docs/research.md)
     loss_penalty: float = 0.0       # resume points off for every loss; tried at 2 and reverted, see docs/research.md
+    bubble_rank: int = 12           # the resume compares each team with the team at this rating rank; 12 is the playoff cutoff
     group_game_weight: float = 1.5  # games between two top-group teams
     hfa_scale: float = 1.0          # scale on the estimated home-field edge
     upset_bonus: float = 0.0        # extra weight when the lower-rated team wins
