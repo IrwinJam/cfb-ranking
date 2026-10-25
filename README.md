@@ -44,35 +44,35 @@ These settings belong to the margin rating, and they were fit before the points 
 <!-- ap:start -->
 ## AP Top 25 and the board, through week 8
 
-The AP poll released after week 7 games, with the board's rank for each team. A team outside the Power Four group has no board rank. A positive gap means the board has the team higher.
+The AP poll released after week 8 games, with the board's rank for each team. A team outside the Power Four group has no board rank. A positive gap means the board has the team higher.
 
 | AP | Team | Board | Gap |
 |---|------|-------|-----|
 | 1 | Miami | 1 | 0 |
-| 2 | BYU | 6 | -4 |
-| 3 | Ohio State | 2 | +1 |
-| 4 | Notre Dame | 5 | -1 |
-| 5 | Georgia | 8 | -3 |
-| 6 | Indiana | 4 | +2 |
-| 7 | Ole Miss | 15 | -8 |
-| 8 | Texas Tech | 12 | -4 |
-| 9 | UCLA | 10 | -1 |
-| 10 | Utah | 3 | +7 |
-| 11 | Tennessee | 20 | -9 |
-| 12 | Kentucky | 11 | +1 |
-| 13 | Alabama | 9 | +4 |
-| 14 | Houston | 16 | -2 |
-| 15 | Iowa | 24 | -9 |
-| 16 | USC | 30 | -14 |
-| 17 | Wake Forest | 13 | +4 |
-| 18 | LSU | 14 | +4 |
-| 19 | Texas | 17 | +2 |
-| 20 | Florida | 25 | -5 |
-| 21 | Boise State | - | - |
-| 22 | Missouri | 22 | 0 |
-| 23 | SMU | 19 | +4 |
-| 24 | Northwestern | 18 | +6 |
-| 25 | Arizona | 7 | +18 |
+| 2 | Ohio State | 2 | 0 |
+| 3 | Georgia | 8 | -5 |
+| 4 | Indiana | 4 | 0 |
+| 5 | Notre Dame | 5 | 0 |
+| 6 | Utah | 3 | +3 |
+| 7 | UCLA | 10 | -3 |
+| 8 | BYU | 6 | +2 |
+| 9 | Kentucky | 11 | -2 |
+| 10 | Alabama | 9 | +1 |
+| 11 | Texas | 17 | -6 |
+| 12 | Ole Miss | 15 | -3 |
+| 13 | Texas Tech | 12 | +1 |
+| 14 | Wake Forest | 13 | +1 |
+| 15 | LSU | 14 | +1 |
+| 16 | Tennessee | 20 | -4 |
+| 17 | Florida | 25 | -8 |
+| 18 | Houston | 16 | +2 |
+| 19 | SMU | 19 | 0 |
+| 20 | Boise State | - | - |
+| 20 | Northwestern | 18 | +2 |
+| 22 | Arizona | 7 | +15 |
+| 23 | Missouri | 22 | +1 |
+| 24 | Oklahoma State | 23 | +1 |
+| 25 | Wisconsin | 26 | -1 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
