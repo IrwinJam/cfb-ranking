@@ -26,53 +26,53 @@ The settings were fit twice. The first fit used game results: ratings through we
 
 These settings belong to the margin rating, and they were fit before the points rating was added. A coin flip scores 0.693 and lower is better. The AP fit matches the poll more closely and predicts games worse, which is why the game-results fit is the one in use (`fitted_params.json`). The AP fit is kept for comparison in `fitted_params_ap.json`.
 
-## Rankings through week 7, 2026
+## Rankings through week 8, 2026
 
 | # | Team | Record |
 |---|------|--------|
-| 1 | BYU (Big 12) | 6-0 |
-| 2 | Miami (ACC) | 6-0 |
-| 3 | Texas Tech (Big 12) | 6-0 |
-| 4 | Ohio State (Big Ten) | 6-1 |
+| 1 | Miami (ACC) | 7-0 |
+| 2 | Ohio State (Big Ten) | 6-1 |
+| 3 | Utah (Big 12) | 7-0 |
+| 4 | Indiana (Big Ten) | 7-1 |
 | 5 | Notre Dame | 6-1 |
-| 6 | Utah (Big 12) | 6-0 |
-| 7 | Indiana (Big Ten) | 6-1 |
-| 8 | Ole Miss (SEC) | 5-1 |
-| 9 | Georgia (SEC) | 6-1 |
-| 10 | UCLA (Big Ten) | 6-0 |
+| 6 | BYU (Big 12) | 6-1 |
+| 7 | Arizona (Big 12) | 6-1 |
+| 8 | Georgia (SEC) | 6-1 |
+| 9 | Alabama (SEC) | 6-2 |
+| 10 | UCLA (Big Ten) | 7-0 |
 
 <!-- ap:start -->
-## AP Top 25 and the board, through week 7
+## AP Top 25 and the board, through week 8
 
 The AP poll released after week 7 games, with the board's rank for each team. A team outside the Power Four group has no board rank. A positive gap means the board has the team higher.
 
 | AP | Team | Board | Gap |
 |---|------|-------|-----|
-| 1 | Miami | 2 | -1 |
-| 2 | BYU | 1 | +1 |
-| 3 | Ohio State | 4 | -1 |
+| 1 | Miami | 1 | 0 |
+| 2 | BYU | 6 | -4 |
+| 3 | Ohio State | 2 | +1 |
 | 4 | Notre Dame | 5 | -1 |
-| 5 | Georgia | 9 | -4 |
-| 6 | Indiana | 7 | -1 |
-| 7 | Ole Miss | 8 | -1 |
-| 8 | Texas Tech | 3 | +5 |
+| 5 | Georgia | 8 | -3 |
+| 6 | Indiana | 4 | +2 |
+| 7 | Ole Miss | 15 | -8 |
+| 8 | Texas Tech | 12 | -4 |
 | 9 | UCLA | 10 | -1 |
-| 10 | Utah | 6 | +4 |
-| 11 | Tennessee | 15 | -4 |
-| 12 | Kentucky | 17 | -5 |
-| 13 | Alabama | 13 | 0 |
-| 14 | Houston | 14 | 0 |
-| 15 | Iowa | 16 | -1 |
-| 16 | USC | 20 | -4 |
-| 17 | Wake Forest | 11 | +6 |
-| 18 | LSU | 18 | 0 |
-| 19 | Texas | 23 | -4 |
-| 20 | Florida | 26 | -6 |
+| 10 | Utah | 3 | +7 |
+| 11 | Tennessee | 20 | -9 |
+| 12 | Kentucky | 11 | +1 |
+| 13 | Alabama | 9 | +4 |
+| 14 | Houston | 16 | -2 |
+| 15 | Iowa | 24 | -9 |
+| 16 | USC | 30 | -14 |
+| 17 | Wake Forest | 13 | +4 |
+| 18 | LSU | 14 | +4 |
+| 19 | Texas | 17 | +2 |
+| 20 | Florida | 25 | -5 |
 | 21 | Boise State | - | - |
-| 22 | Missouri | 24 | -2 |
-| 23 | SMU | 22 | +1 |
-| 24 | Northwestern | 19 | +5 |
-| 25 | Arizona | 12 | +13 |
+| 22 | Missouri | 22 | 0 |
+| 23 | SMU | 19 | +4 |
+| 24 | Northwestern | 18 | +6 |
+| 25 | Arizona | 7 | +18 |
 <!-- ap:end -->
 
 The weekly tables, schedule strength included, and the history of the fitted settings are in `outputs/2026/`. What the model leaves out is in [docs/gaps.md](docs/gaps.md).
@@ -83,7 +83,7 @@ The weekly tables, schedule strength included, and the history of the fitted set
 pip install -r requirements.txt
 cp .env.example .env              # add a free key from collegefootballdata.com/key
 python season_history.py --year 2026
-python fit_to_games.py --year 2026 --through 7
+python fit_to_games.py --year 2026 --through 8
 python research/rule_eval.py      # the walk-forward test behind the blend
 python tests/test_synthetic.py    # made-up seasons with known strengths, no key needed
 ```
